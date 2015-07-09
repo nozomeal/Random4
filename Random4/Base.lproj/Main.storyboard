@@ -67,7 +67,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="button3" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hf5-4i-8PI"/>
+                                    <action selector="button3" destination="vXZ-lx-hvc" eventType="touchUpInside" id="j2O-fP-AZp"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -75,7 +75,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="label" destination="9mz-Zp-EjD" id="si2-0f-nW7"/>
+                        <outlet property="label" destination="9mz-Zp-EjD" id="vBv-5d-Jns"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

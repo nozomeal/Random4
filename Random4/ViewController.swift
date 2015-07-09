@@ -11,28 +11,25 @@ import UIKit
 class ViewController: UIViewController {
     
     //ラベルのアウトレット接続
-    @IBOutlet var label:UILabel!
+    @IBOutlet weak var label:UILabel!
     
     
-    //4桁の数字を入れる配列を準備する
-    var combination: [Int] = [1,2,3,4]
-    var count :Int = 0
-    
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+       //4桁の数字を入れる配列を準備する
+        var combination: [String] = ["1","2","3","4"]
         
         
-        
-        
-        //１〜４までの数をランダムに表示する
-        var randInt1 = (Int(arc4random_uniform(4)) + 1)
-
-        
-        label.text = String(combination[randInt1])
-        
-    }
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            // Do any additional setup after loading the view, typically from a nib.
+            
+            
+            //        //１〜４までの数をランダムに表示する
+            var rand1 = (String(arc4random_uniform(4)+1))
+            var rand2 = (String(arc4random_uniform(4)+1))
+            var rand3 = (String(arc4random_uniform(4)+1))
+            var rand4 = (String(arc4random_uniform(4)+1))
+            label.text = String (stringInterpolation: rand1, rand2,rand3,rand4)
+        }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
