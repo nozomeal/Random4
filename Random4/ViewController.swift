@@ -14,20 +14,20 @@ class ViewController: UIViewController {
     @IBOutlet weak var label:UILabel!
     
     
-       //4桁の数字を入れる配列を準備する
-        var combination: [String] = ["1","2","3","4"]
-        
-        
+    //4桁の数字を入れる配列を準備する
+    var combination: [String] = ["1","2","3","4"]
+    //１〜４までの数をランダムに決める
+    var rand1 = String(arc4random_uniform(4)+1)
+    var rand2 = String(arc4random_uniform(4)+1)
+    var rand3 = String(arc4random_uniform(4)+1)
+    var rand4 = String(arc4random_uniform(4)+1)
+    
+    
         override func viewDidLoad() {
             super.viewDidLoad()
             // Do any additional setup after loading the view, typically from a nib.
             
-            
-            //        //１〜４までの数をランダムに表示する
-            var rand1 = (String(arc4random_uniform(4)+1))
-            var rand2 = (String(arc4random_uniform(4)+1))
-            var rand3 = (String(arc4random_uniform(4)+1))
-            var rand4 = (String(arc4random_uniform(4)+1))
+            //ラベルにランダムな数を表示する
             label.text = String (stringInterpolation: rand1, rand2,rand3,rand4)
         }
 
@@ -37,24 +37,70 @@ class ViewController: UIViewController {
     }
     
     @IBAction func button1(){
-        combination.removeAtIndex(0)
-        //label.attributedText = self.makeStringFrom
-
+        if rand1 == "1" {
+            combination.removeAtIndex(0)
+            label.text = String (stringInterpolation: rand2,rand3,rand4)
+        }else if rand2 == "1" {
+            combination.removeAtIndex(0)
+            label.text = String (stringInterpolation: rand3,rand4)
+        }else if rand3 == "1" {
+            combination.removeAtIndex(0)
+            label.text = String (stringInterpolation: rand4)
+        }else if rand4 == "1" {
+            combination.removeAtIndex(0)
+            label.text = String (0)
+        }
     }
-    
     @IBAction func button2(){
-        combination.removeAtIndex(1)
+        if rand1 == "2"{
+            combination.removeAtIndex(1)
+            label.text = String (stringInterpolation: rand2,rand3,rand4)
+        }else if rand2 == "2" {
+            combination.removeAtIndex(1)
+            label.text = String (stringInterpolation: rand3,rand4)
+        }else if rand3 == "2" {
+            combination.removeAtIndex(1)
+            label.text = String (stringInterpolation: rand4)
+        }else if rand4 == "2" {
+           combination.removeAtIndex(1)
+            label.text = String (0)
+        }
     }
     
     @IBAction func button3(){
-        combination.removeAtIndex(2)
+        if rand1 == "3"{
+            combination.removeAtIndex(2)
+            label.text = String (stringInterpolation: rand2,rand3,rand4)
+        }else if rand2 == "3" {
+            combination.removeAtIndex(2)
+            label.text = String (stringInterpolation: rand3,rand4)
+        }else if rand3 == "3" {
+            combination.removeAtIndex(2)
+            label.text = String (stringInterpolation: rand4)
+        }else if rand4 == "3" {
+            combination.removeAtIndex(2)
+        label.text = String (0)
+        }
+    
     }
     @IBAction func button4(){
-        combination.removeAtIndex(3)
+        if rand1 == "4"{
+            combination.removeAtIndex(3)
+            label.text = String (stringInterpolation: rand2,rand3,rand4)
+        }else if rand2 == "4" {
+            combination.removeAtIndex(3)
+            label.text = String (stringInterpolation: rand3,rand4)
+        }else if rand3 == "4" {
+            combination.removeAtIndex(3)
+            label.text = String (stringInterpolation: rand4)
+        }else if rand4 == "4" {
+            combination.removeAtIndex(3)
+            label.text = String (0)
+        }
+    }
     }
     
     
     
-    
-}
+
 
